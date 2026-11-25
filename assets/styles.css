@@ -205,6 +205,8 @@ a {
 .nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; }
 
 .nav { order: 2; }
+.nav-book { display: none; }
+@media (max-width: 62rem) { .js .nav .nav-book { display: list-item; } }
 .header-cta { order: 3; min-height: 2.75rem; padding: 0.5rem 1rem; font-size: var(--step--1); }
 .menu-toggle { order: 4; }
 .cta-short { display: none; }

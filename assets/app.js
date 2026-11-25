@@ -96,23 +96,19 @@
     }
   }
 
-  // Formulário para lares: validação acessível
-  var form = document.querySelector('[data-request-form]');
-  if (form) {
+  // Formulários (marcação e lares): validação acessível e envio por email
+  var ENDPOINT = 'https://formsubmit.co/ajax/fisiostudioab@gmail.com';
+  var CLINIC_EMAIL = 'fisiostudioab@gmail.com';
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-form]'), function (form) {
     var status = form.querySelector('.form-status');
-    var messages = {
-      nome: 'Indique o seu nome.',
-      instituicao: 'Indique o nome da instituição.',
-      email: 'Indique um email válido, por exemplo nome@instituicao.pt.',
-      pedido: 'Escolha pelo menos uma opção.',
-      consentimento: 'Para o contactarmos, precisamos do seu consentimento.'
-    };
+    var button = form.querySelector('button[type="submit"]');
+    var buttonText = button ? button.textContent : '';
 
     var setError = function (name, show) {
       var err = document.getElementById('erro-' + name);
-      var fields = form.querySelectorAll('[name="' + name + '"]');
       if (err) err.hidden = !show;
-      fields.forEach(function (f) {
+      form.querySelectorAll('[name="' + name + '"]').forEach(function (f) {
         if (show) f.setAttribute('aria-invalid', 'true');
         else f.removeAttribute('aria-invalid');
       });
@@ -120,57 +116,135 @@
 
     var check = function () {
       var problems = [];
-      var nome = form.elements.nome.value.trim();
-      var inst = form.elements.instituicao.value.trim();
-      var email = form.elements.email.value.trim();
-      var pedidos = form.querySelectorAll('[name="pedido"]:checked').length;
-      var consent = form.elements.consentimento.checked;
-
-      setError('nome', !nome); if (!nome) problems.push('nome');
-      setError('instituicao', !inst); if (!inst) problems.push('instituicao');
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      setError('email', !emailOk); if (!emailOk) problems.push('email');
-      setError('pedido', !pedidos); if (!pedidos) problems.push('pedido');
-      setError('consentimento', !consent); if (!consent) problems.push('consentimento');
+      var seen = {};
+      form.querySelectorAll('[required], [data-required-group]').forEach(function (node) {
+        var name = node.getAttribute('data-required-group') || node.name;
+        if (!name || seen[name]) return;
+        seen[name] = true;
+        var ok;
+        if (node.hasAttribute('data-required-group')) {
+          ok = form.querySelectorAll('[name="' + name + '"]:checked').length > 0;
+        } else if (node.type === 'checkbox') {
+          ok = node.checked;
+        } else if (node.type === 'radio') {
+          ok = form.querySelectorAll('[name="' + name + '"]:checked').length > 0;
+        } else if (node.type === 'email') {
+          ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(node.value.trim());
+        } else if (node.type === 'tel') {
+          ok = node.value.replace(/\D/g, '').length >= 9;
+        } else {
+          ok = node.value.trim().length > 0;
+        }
+        setError(name, !ok);
+        if (!ok) problems.push(name);
+      });
+      // Email opcional: só valida se estiver preenchido
+      form.querySelectorAll('input[type="email"]:not([required])').forEach(function (node) {
+        var v = node.value.trim();
+        var ok = !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+        setError(node.name, !ok);
+        if (!ok) problems.push(node.name);
+      });
       return problems;
+    };
+
+    var collect = function () {
+      var data = {};
+      var groups = {};
+      Array.prototype.forEach.call(form.elements, function (f) {
+        if (!f.name || f.name.charAt(0) === '_' || f.type === 'submit') return;
+        var label = f.getAttribute('data-label') || (f.closest('fieldset') && f.closest('fieldset').getAttribute('data-label')) || f.name;
+        if (f.type === 'checkbox' || f.type === 'radio') {
+          if (!f.checked) return;
+          var text = f.getAttribute('data-value') || f.value;
+          if (f.name === 'consentimento') { data['Consentimento'] = 'Sim'; return; }
+          groups[label] = (groups[label] ? groups[label] + '; ' : '') + text;
+          return;
+        }
+        if (f.tagName === 'SELECT') { data[label] = f.options[f.selectedIndex].text; return; }
+        var v = f.value.trim();
+        if (v) data[label] = v;
+      });
+      Object.keys(groups).forEach(function (k) { data[k] = groups[k]; });
+      return data;
+    };
+
+    var mailtoFrom = function (subject, data) {
+      var body = Object.keys(data).map(function (k) { return k + ': ' + data[k]; }).join('\n');
+      return 'mailto:' + CLINIC_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    };
+
+    var show = function (kind, html) {
+      status.className = 'form-status form-status--' + kind;
+      status.innerHTML = html;
+      status.focus();
     };
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var problems = check();
-      status.className = 'form-status';
       if (problems.length) {
-        status.classList.add('form-status--error');
-        status.textContent = (problems.length === 1 ? 'Falta corrigir 1 campo. ' : 'Faltam corrigir ' + problems.length + ' campos. ')
-          + problems.map(function (n) { return messages[n]; }).join(' ');
+        var msgs = problems.map(function (n) {
+          var err = document.getElementById('erro-' + n);
+          return err ? err.textContent : '';
+        });
+        status.className = 'form-status form-status--error';
+        status.textContent = (problems.length === 1 ? 'Falta corrigir 1 campo. ' : 'Faltam corrigir ' + problems.length + ' campos. ') + msgs.join(' ');
         var first = form.querySelector('[name="' + problems[0] + '"]');
         if (first) first.focus();
         return;
       }
-      var el = form.elements;
-      var pedidos = Array.prototype.map.call(form.querySelectorAll('[name="pedido"]:checked'), function (c) {
-        return c.value === 'dossier' ? 'Receber o dossier (PDF)' : 'Agendar a sessão de demonstração';
+      if (form.elements._honey && form.elements._honey.value) return;
+
+      var data = collect();
+      var who = form.elements.instituicao ? form.elements.instituicao.value.trim() : form.elements.nome.value.trim();
+      var subject = (form.getAttribute('data-subject') || 'Pedido pelo site') + ' - ' + who;
+      var fallback = mailtoFrom(subject, data);
+      var payload = Object.assign({ _subject: subject, _template: 'table', _captcha: 'false' }, data);
+      if (data.Email) payload._replyto = data.Email;
+
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      button.textContent = 'A enviar…';
+      status.className = 'form-status';
+      status.textContent = '';
+
+      var done = function () {
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+        button.textContent = buttonText;
+      };
+
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (r) { return r.json(); }).then(function (res) {
+        done();
+        if (res && (res.success === true || res.success === 'true')) {
+          show('ok', form.getAttribute('data-success'));
+          form.reset();
+        } else {
+          throw new Error('envio recusado');
+        }
+      }).catch(function () {
+        done();
+        show('error', 'Não conseguimos enviar o pedido pelo site. <a href="' + fallback + '">Enviar por email</a> (abre o seu email com o pedido já escrito) ou ligue para o <a href="tel:+351963108844">963 108 844</a>.');
       });
-      var linhas = [
-        'Nome: ' + el.nome.value.trim(),
-        'Cargo: ' + (el.cargo.value.trim() || '-'),
-        'Instituição: ' + el.instituicao.value.trim(),
-        'Email: ' + el.email.value.trim(),
-        'Telefone: ' + (el.telefone.value.trim() || '-'),
-        'N.º aproximado de residentes: ' + (el.residentes.value.trim() || '-'),
-        'Pedido: ' + pedidos.join('; '),
-        '',
-        'Consentimento: aceito que a FisioStudio use estes dados apenas para responder a este pedido.'
-      ];
-      var assunto = 'Pedido de ' + (pedidos.length > 1 ? 'dossier e demonstração' : (pedidos[0].indexOf('dossier') > -1 ? 'dossier' : 'sessão de demonstração')) + ' - ' + el.instituicao.value.trim();
-      window.location.href = 'mailto:fisiostudioab@gmail.com?subject=' + encodeURIComponent(assunto) + '&body=' + encodeURIComponent(linhas.join('\n'));
-      status.classList.add('form-status--ok');
-      status.textContent = 'Abrimos o seu programa de email com o pedido preenchido. Só falta carregar em enviar. Se não abrir, escreva para fisiostudioab@gmail.com ou ligue para o 963 108 844.';
-      status.focus();
     });
 
     form.addEventListener('input', function (e) {
       if (e.target.getAttribute('aria-invalid') === 'true') check();
     });
-  }
+    form.addEventListener('change', function (e) {
+      if (e.target.getAttribute('aria-invalid') === 'true') check();
+    });
+
+    // Pré-selecionar a especialidade a partir do link (?servico=...)
+    var sel = form.querySelector('select[name="servico"]');
+    var wanted = new URLSearchParams(location.search).get('servico');
+    if (sel && wanted) {
+      Array.prototype.forEach.call(sel.options, function (o) { if (o.value === wanted) sel.value = wanted; });
+    }
+  });
 })();

@@ -30,6 +30,7 @@
     <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
     <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 17.5h2"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   </defs>
 </svg>
@@ -39,7 +40,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="FisioStudio, página inicial"><img src="assets/logo-mark.png" alt="" width="57" height="44"><span aria-hidden="true">FisioStudio</span></a>
-    <a class="btn header-cta" href="#pedido" aria-label="Pedir demonstração"><span class="cta-long" aria-hidden="true">Pedir demonstração</span><span class="cta-short" aria-hidden="true">Pedir</span></a>
+    <a class="btn header-cta" href="marcar.html" aria-label="Marcar consulta"><span class="cta-long" aria-hidden="true">Marcar consulta</span><span class="cta-short" aria-hidden="true">Marcar</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
       <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>Menu
     </button>
@@ -178,50 +179,50 @@
         </div>
       </div>
 
-      <form class="form" data-request-form novalidate aria-labelledby="pedido-titulo">
+      <form class="form" data-form data-subject="Pedido de lar ou instituição" data-success="Pedido enviado. Vamos responder por email com o dossier ou para combinar a sessão de demonstração." novalidate aria-labelledby="pedido-titulo">
         <div class="field-row">
           <div class="field">
             <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-nome">
+            <input id="nome" name="nome" data-label="Nome" type="text" autocomplete="name" required aria-describedby="erro-nome">
             <p class="error" id="erro-nome" hidden>Indique o seu nome.</p>
           </div>
           <div class="field">
             <label for="cargo">Cargo <span class="hint">(opcional)</span></label>
-            <input id="cargo" name="cargo" type="text" autocomplete="organization-title" placeholder="Ex.: diretor técnico">
+            <input id="cargo" name="cargo" data-label="Cargo" type="text" autocomplete="organization-title" placeholder="Ex.: diretor técnico">
           </div>
         </div>
         <div class="field">
           <label for="instituicao">Instituição</label>
-          <input id="instituicao" name="instituicao" type="text" autocomplete="organization" required aria-describedby="erro-instituicao">
+          <input id="instituicao" name="instituicao" data-label="Instituição" type="text" autocomplete="organization" required aria-describedby="erro-instituicao">
           <p class="error" id="erro-instituicao" hidden>Indique o nome da instituição.</p>
         </div>
         <div class="field-row">
           <div class="field">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="erro-email">
+            <input id="email" name="email" data-label="Email" type="email" autocomplete="email" required aria-describedby="erro-email">
             <p class="error" id="erro-email" hidden>Indique um email válido, por exemplo nome@instituicao.pt.</p>
           </div>
           <div class="field">
             <label for="telefone">Telefone <span class="hint">(opcional)</span></label>
-            <input id="telefone" name="telefone" type="tel" autocomplete="tel">
+            <input id="telefone" name="telefone" data-label="Telefone" type="tel" autocomplete="tel">
           </div>
         </div>
         <div class="field">
           <label for="residentes">Número aproximado de residentes <span class="hint">(opcional)</span></label>
-          <input id="residentes" name="residentes" type="number" min="1" inputmode="numeric">
+          <input id="residentes" name="residentes" data-label="N.º aproximado de residentes" type="number" min="1" inputmode="numeric">
         </div>
-        <fieldset aria-describedby="erro-pedido">
+        <fieldset data-label="Pedido" data-required-group="pedido" aria-describedby="erro-pedido">
           <legend>O que pretende? <span class="hint">(escolha pelo menos uma opção)</span></legend>
-          <label class="choice"><input type="checkbox" name="pedido" value="dossier"> Receber o dossier (PDF)</label>
-          <label class="choice"><input type="checkbox" name="pedido" value="demonstracao"> Agendar a sessão de demonstração</label>
+          <label class="choice"><input type="checkbox" name="pedido" value="dossier" data-value="Receber o dossier (PDF)"> Receber o dossier (PDF)</label>
+          <label class="choice"><input type="checkbox" name="pedido" value="demonstracao" data-value="Agendar a sessão de demonstração"> Agendar a sessão de demonstração</label>
           <p class="error" id="erro-pedido" hidden>Escolha pelo menos uma opção.</p>
         </fieldset>
         <div class="field">
           <label class="choice choice--consent"><input type="checkbox" name="consentimento" required aria-describedby="erro-consentimento"> Aceito que a FisioStudio use estes dados apenas para responder a este pedido.</label>
           <p class="error" id="erro-consentimento" hidden>Para o contactarmos, precisamos do seu consentimento.</p>
         </div>
-        <button class="btn" type="submit">Enviar pedido por email</button>
-        <p class="hint">Ao enviar, abrimos o seu programa de email com o pedido já escrito para fisiostudioab@gmail.com.</p>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+        <button class="btn" type="submit">Enviar pedido</button>
         <p class="form-status" role="status" tabindex="-1"></p>
       </form>
     </div>
@@ -239,6 +240,7 @@
           <li><a href="index.html#equipa">Equipa</a></li>
           <li><a href="lares.html">Lares e empresas</a></li>
           <li><a href="index.html#onde-estamos">Onde estamos</a></li>
+          <li><a href="marcar.html">Marcar consulta</a></li>
         </ul>
       </nav>
     </div>

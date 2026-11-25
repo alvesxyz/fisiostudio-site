@@ -29,6 +29,7 @@
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></symbol>
     <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 17.5h2"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   </defs>
 </svg>
@@ -38,7 +39,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="FisioStudio, página inicial"><img src="assets/logo-mark.png" alt="" width="57" height="44"><span aria-hidden="true">FisioStudio</span></a>
-    <a class="btn header-cta" href="#marcar" aria-label="Marcar avaliação"><span class="cta-long" aria-hidden="true">Marcar avaliação</span><span class="cta-short" aria-hidden="true">Marcar</span></a>
+    <a class="btn header-cta" href="marcar.html" aria-label="Marcar consulta"><span class="cta-long" aria-hidden="true">Marcar consulta</span><span class="cta-short" aria-hidden="true">Marcar</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
       <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>Menu
     </button>
@@ -103,12 +104,15 @@
         <div class="hero__aside">
           <div class="book-plate" id="marcar">
             <h2>Marcar avaliação</h2>
-            <p>Diga-nos o que sente. Encontramos consigo o melhor horário.</p>
+            <p>Peça a marcação aqui no site ou fale connosco. Encontramos consigo o melhor horário.</p>
             <div class="actions">
+              <a class="btn btn--ink" href="marcar.html">
+                <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Marcar online
+              </a>
               <a class="btn" href="https://wa.me/351963108844">
                 <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Marcar por WhatsApp
               </a>
-              <a class="btn btn--ink" href="tel:+351963108844">
+              <a class="btn" href="tel:+351963108844">
                 <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Ligar para a clínica
               </a>
             </div>
@@ -170,7 +174,7 @@
             <div>
               <p>Acompanhamos o desenvolvimento motor do bebé e situações como o torcicolo, sempre com os pais presentes e ao ritmo da criança.</p>
               <p>Quando é preciso apoio na fala ou nas tarefas do dia a dia, as terapias estão no mesmo espaço. Menos deslocações para a família.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=pediatrica">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -191,7 +195,7 @@
             <div>
               <p>Corrida, trail, futebol, padel. Ajudamos a recuperar de uma lesão e, sobretudo, a evitar a próxima, para não ter de parar os treinos.</p>
               <p>A dor que aparece sempre no mesmo quilómetro merece ser vista antes de se tornar uma lesão.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=fisioterapia">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -211,7 +215,7 @@
             <div>
               <p>Dor lombar, pescoço tenso, ombro que não deixa dormir. É a área com mais procura na clínica: dores, lesões musculares e articulares, problemas de coluna e recuperação funcional.</p>
               <p>Começamos por uma avaliação individual e definimos consigo um plano que caiba na sua agenda.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=fisioterapia">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -232,7 +236,7 @@
             <div>
               <p>A gravidez e o parto mudam o corpo. Perdas de urina, dor pélvica ou lombar, sensação de peso: são situações comuns e podem ser avaliadas.</p>
               <p>Falamos consigo sem tabus e sem pressa, numa consulta individual e reservada.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=pelvica">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -253,7 +257,7 @@
             <div>
               <p>Manter a força, o equilíbrio e a confiança para andar. Trabalhamos a mobilidade e a prevenção de quedas, ao ritmo de cada pessoa.</p>
               <p>A clínica tem estacionamento e acesso fácil, pensado para quem se desloca com mais dificuldade.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=fisioterapia">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -273,7 +277,7 @@
             <div>
               <p>Quando sair de casa é difícil, a fisioterapia vai até si. Fazemos sessões ao domicílio em Leiria e nas freguesias à volta.</p>
               <p>Também trabalhamos com lares e centros de dia, com sessões regulares para os residentes.</p>
-              <a class="btn" href="#marcar">Marcar avaliação</a>
+              <a class="btn" href="marcar.html?servico=fisioterapia">Marcar avaliação</a>
             </div>
             <div>
               <h4>Nesta paragem</h4>
@@ -299,7 +303,7 @@
         <p>Até uma em cada três mulheres em Portugal tem incontinência urinária, e só uma parte procura ajuda, muitas vezes por vergonha.</p>
         <p>A fisioterapia pélvica começa por uma avaliação individual. Explicamos o que se passa e o que pode ser feito no seu caso.</p>
         <cite>Fonte: Silva et al. (2021), Acta Médica Portuguesa.</cite>
-        <a class="btn" href="#marcar">Marcar avaliação de saúde pélvica</a>
+        <a class="btn" href="marcar.html?servico=pelvica">Marcar avaliação de saúde pélvica</a>
         <div class="soon">
           <svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg>
           <span>Podcast FisioStudio, episódio 1: o tabu da saúde pélvica na gravidez e no pós-parto. <strong>Em breve.</strong></span>
@@ -340,13 +344,13 @@
         <div>
           <h2 id="como-titulo" class="visually-hidden">Como marcar</h2>
           <ol class="steps">
-            <li><div><strong>Envie uma mensagem ou ligue</strong><span>Diga-nos o que sente ou o que procura. Não precisa de saber qual é a especialidade.</span></div></li>
+            <li><div><strong>Peça a marcação</strong><span>No site, por WhatsApp ou por telefone. Não precisa de saber qual é a especialidade.</span></div></li>
             <li><div><strong>Avaliação individual</strong><span>Ouvimos a sua história e avaliamos a situação com calma.</span></div></li>
             <li><div><strong>Um plano para si</strong><span>Combinamos o acompanhamento, a frequência e os exercícios para casa.</span></div></li>
           </ol>
         </div>
-        <a class="btn" href="#marcar">
-          <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Marcar avaliação
+        <a class="btn" href="marcar.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Marcar consulta
         </a>
       </div>
     </div>
@@ -414,6 +418,7 @@
           <li><a href="#equipa">Equipa</a></li>
           <li><a href="lares.html">Lares e empresas</a></li>
           <li><a href="#onde-estamos">Onde estamos</a></li>
+          <li><a href="marcar.html">Marcar consulta</a></li>
         </ul>
       </nav>
     </div>

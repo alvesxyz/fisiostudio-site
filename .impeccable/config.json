@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-25T20:27:08.344Z",
+        "reason": "Claude triage: full-bleed sections hold content in .wrap with a >=16px gutter; verified in 390px and 1440px captures"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "lares.html"
+        ],
+        "createdAt": "2026-11-25T20:27:08.352Z",
+        "reason": "Claude triage: full-bleed sections hold content in .wrap with a >=16px gutter; verified in 390px and 1440px captures"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "4rem",
+        "files": [
+          "assets/styles.css"
+        ],
+        "createdAt": "2026-11-25T20:41:50.444Z",
+        "reason": "Claude triage: DESIGN.md records the hero h1 fixed at 4rem from 75rem; detector reads only the clamp ramp"
+      }
+    ]
+  }
+}

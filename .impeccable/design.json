@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T20:41:25+00:00",
+  "title": "Design System: FisioStudio",
+  "extensions": {
+    "colorMeta": {
+      "sign": {
+        "role": "primary",
+        "displayName": "Charcoal Sign",
+        "canonical": "#424242",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "sign-deep": {
+        "role": "primary",
+        "displayName": "Deep Charcoal",
+        "canonical": "#2b2b2b",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "sign-tint": {
+        "role": "primary",
+        "displayName": "Charcoal Tint",
+        "canonical": "#d9d9d9",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "mark": {
+        "role": "secondary",
+        "displayName": "Logo Orange",
+        "canonical": "#ef8120",
+        "tonalRamp": [
+          "#130803",
+          "#351e0d",
+          "#5e3413",
+          "#8a4b19",
+          "#bd661d",
+          "#f18427",
+          "#ffb273",
+          "#ffe0ba"
+        ]
+      },
+      "mark-hover": {
+        "role": "secondary",
+        "displayName": "Orange Hover",
+        "canonical": "#f59a47",
+        "tonalRamp": [
+          "#120903",
+          "#2e2116",
+          "#553921",
+          "#7e522c",
+          "#af7038",
+          "#e18e43",
+          "#ffb671",
+          "#ffe4be"
+        ]
+      },
+      "brown": {
+        "role": "tertiary",
+        "displayName": "Deep Orange",
+        "canonical": "#9c4a09",
+        "tonalRamp": [
+          "#1c0300",
+          "#401500",
+          "#682c00",
+          "#924405",
+          "#b36c40",
+          "#d09674",
+          "#ebc0a8",
+          "#ffe8d9"
+        ]
+      },
+      "brown-tint": {
+        "role": "tertiary",
+        "displayName": "Orange Tint",
+        "canonical": "#fce3cc",
+        "tonalRamp": [
+          "#0d0b09",
+          "#262321",
+          "#423f3c",
+          "#625c57",
+          "#897e74",
+          "#b1a193",
+          "#dbc6b3",
+          "#f9ece1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1f1f1f",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#5c5c5c",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "ink-hover": {
+        "role": "neutral",
+        "displayName": "Ink Hover",
+        "canonical": "#3a3a3a",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "#1f1f1f",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "night-soft": {
+        "role": "neutral",
+        "displayName": "Night Soft",
+        "canonical": "#c8c8c8",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Cool Ground",
+        "canonical": "#f5f5f4",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242423",
+          "#40403f",
+          "#5e5e5d",
+          "#80807f",
+          "#a4a4a4",
+          "#cacac9",
+          "#eeeeee"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule Grey",
+        "canonical": "#dcdcdc",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Red",
+        "canonical": "#a4161a",
+        "tonalRamp": [
+          "#260000",
+          "#4f0000",
+          "#7c020b",
+          "#a82323",
+          "#c45b53",
+          "#de8b82",
+          "#f5bab3",
+          "#ffe5e1"
+        ]
+      },
+      "error-bg": {
+        "role": "neutral",
+        "displayName": "Error Wash",
+        "canonical": "#fff5f5",
+        "tonalRamp": [
+          "#0c0b0b",
+          "#252424",
+          "#403f3f",
+          "#5f5d5d",
+          "#837f7f",
+          "#a8a3a3",
+          "#d0c8c8",
+          "#f2eded"
+        ]
+      },
+      "ok": {
+        "role": "neutral",
+        "displayName": "Success Green",
+        "canonical": "#14532d",
+        "tonalRamp": [
+          "#001102",
+          "#002d12",
+          "#0f4c28",
+          "#396a48",
+          "#658b6f",
+          "#91ad98",
+          "#bfd0c3",
+          "#e8f1ea"
+        ]
+      },
+      "ok-bg": {
+        "role": "neutral",
+        "displayName": "Success Wash",
+        "canonical": "#e6f4ea",
+        "tonalRamp": [
+          "#0a0c0b",
+          "#232423",
+          "#3e403f",
+          "#5c5e5c",
+          "#7c827e",
+          "#9fa7a1",
+          "#c3cec6",
+          "#eaf1ec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 and the night band statement."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads, evidence and request headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Plate titles, stop-panel headers, directory caption."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Route needs, step and fact titles, km-post numerals, proof figures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text at 18px with tabular numerals."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links, destinations, notes, hints, captions, legal; the 16px floor."
+      }
+    },
+    "shadows": [
+      {
+        "name": "header-float",
+        "value": "0 2px 12px rgb(0 0 0 / 0.25)",
+        "purpose": "Sticky white header over scrolling content, with a 1px rule-grey bottom border."
+      },
+      {
+        "name": "menu-drop",
+        "value": "0 12px 24px rgb(0 0 0 / 0.3)",
+        "purpose": "Open mobile nav panel."
+      },
+      {
+        "name": "paper-rest",
+        "value": "0 10px 30px rgb(0 0 0 / 0.08)",
+        "purpose": "Paper plates on the ground, after their inset rule."
+      },
+      {
+        "name": "directory-lift",
+        "value": "0 14px 34px rgb(0 0 0 / 0.22)",
+        "purpose": "Team directory plate on the charcoal field."
+      },
+      {
+        "name": "plate-rule-white",
+        "value": "inset 0 0 0 5px <plate colour>, inset 0 0 0 8px #fff",
+        "purpose": "Inset white sign rule on charcoal, deep charcoal and deep-orange plates."
+      },
+      {
+        "name": "plate-rule-ink",
+        "value": "inset 0 0 0 5px var(--mark), inset 0 0 0 8px var(--ink)",
+        "purpose": "Ink rule on the Logo Orange booking plate."
+      },
+      {
+        "name": "stop-panel-rule",
+        "value": "inset 0 0 0 5px var(--paper), inset 0 0 0 8px var(--sign)",
+        "purpose": "Paper-then-charcoal rule on Linha da vida stop panels."
+      },
+      {
+        "name": "place-board-rule",
+        "value": "inset 0 0 0 5px var(--paper), inset 0 0 0 8px var(--brown)",
+        "purpose": "Paper-then-deep-orange rule on the Onde estamos board."
+      },
+      {
+        "name": "button-rule",
+        "value": "inset 0 0 0 3px <fill>, inset 0 0 0 5px <rule>",
+        "purpose": "Inset rule on every button."
+      },
+      {
+        "name": "focus-halo",
+        "value": "outline: 3px solid var(--ink); outline-offset: 3px; box-shadow: 0 0 0 9px #fff; border-radius: 6px",
+        "purpose": "Global focus ring, legible on every field colour; inset-ruled components append the 9px halo to their own stack."
+      },
+      {
+        "name": "field-focus",
+        "value": "outline: 3px solid var(--sign); outline-offset: 1px; box-shadow: 0 0 0 4px var(--sign-tint)",
+        "purpose": "Text input and textarea focus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition."
+      },
+      {
+        "name": "state",
+        "value": "0.2s",
+        "purpose": "Button fill, rule and 1px lift."
+      },
+      {
+        "name": "nudge",
+        "value": "0.25s",
+        "purpose": "Route arrow 6px slide, station dot scale 1.08."
+      },
+      {
+        "name": "line-draw",
+        "value": "1.6s",
+        "purpose": "Linha da vida white overlay line draws once over the always-visible 35% white base line on entering view (scaleX, scaleY on mobile)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition-duration: 0.01ms; animation-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "prefers-reduced-motion: reduce; line shown fully drawn."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "62rem"
+      },
+      {
+        "name": "single-column",
+        "value": "56rem"
+      },
+      {
+        "name": "steps-stack",
+        "value": "48rem"
+      },
+      {
+        "name": "compact",
+        "value": "40rem"
+      },
+      {
+        "name": "narrow-brand",
+        "value": "24rem"
+      },
+      {
+        "name": "hero-wide",
+        "value": "75rem (min-width): hero h1 fixed at 4rem on one line"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Booking Button",
+      "kind": "button",
+      "refersTo": "button-book",
+      "description": "Logo Orange with ink text and an ink inset rule, for booking and the lares request actions.",
+      "html": "<button class=\"ds-btn ds-btn-book\">Marcar avaliação</button>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;}.ds-btn{display:inline-flex;align-items:center;gap:.6em;min-height:3.25rem;padding:.75rem 1.35rem;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:1.125rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease-out),transform .2s var(--ease-out),box-shadow .2s var(--ease-out);} .ds-btn:hover{transform:translateY(-1px);} .ds-btn:active{transform:none;} .ds-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;} .ds-btn-book{background:var(--mark);color:var(--ink);box-shadow:inset 0 0 0 3px var(--mark),inset 0 0 0 5px var(--ink);} .ds-btn-book:hover{background:var(--mark-hover);box-shadow:inset 0 0 0 3px var(--mark-hover),inset 0 0 0 5px var(--ink);} .ds-btn-book:focus-visible{box-shadow:inset 0 0 0 3px var(--mark),inset 0 0 0 5px var(--ink),0 0 0 9px #fff;}"
+    },
+    {
+      "name": "Sign Button",
+      "kind": "button",
+      "refersTo": "button-sign",
+      "description": "Charcoal Sign with a white inset rule, for wayfinding links to another page.",
+      "html": "<button class=\"ds-btn ds-btn-sign\">Ver a proposta para lares <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12h16M13 5l7 7-7 7\"/></svg></button>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;}.ds-btn{display:inline-flex;align-items:center;gap:.6em;min-height:3.25rem;padding:.75rem 1.35rem;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:1.125rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease-out),transform .2s var(--ease-out),box-shadow .2s var(--ease-out);} .ds-btn:hover{transform:translateY(-1px);} .ds-btn:active{transform:none;} .ds-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;} .ds-btn-sign{background:var(--sign);color:#fff;box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 5px #fff;} .ds-btn-sign:hover{background:var(--sign-deep);box-shadow:inset 0 0 0 3px var(--sign-deep),inset 0 0 0 5px #fff;} .ds-btn-sign:focus-visible{box-shadow:inset 0 0 0 3px var(--sign),inset 0 0 0 5px #fff,0 0 0 9px #fff;}"
+    },
+    {
+      "name": "Location Button",
+      "kind": "button",
+      "refersTo": "button-brown",
+      "description": "White tablet with a Deep Orange rule and text, for map and location actions.",
+      "html": "<div class=\"ds-field-brown\"><button class=\"ds-btn ds-btn-brown\">Abrir no mapa</button></div>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;}.ds-btn{display:inline-flex;align-items:center;gap:.6em;min-height:3.25rem;padding:.75rem 1.35rem;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:1.125rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease-out),transform .2s var(--ease-out),box-shadow .2s var(--ease-out);} .ds-btn:hover{transform:translateY(-1px);} .ds-btn:active{transform:none;} .ds-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;} .ds-field-brown{background:var(--brown-tint);padding:1.5rem;} .ds-btn-brown{background:#fff;color:var(--brown);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--brown);} .ds-btn-brown:hover{background:var(--brown-tint);box-shadow:inset 0 0 0 3px var(--brown-tint),inset 0 0 0 5px var(--brown);} .ds-btn-brown:focus-visible{box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--brown),0 0 0 9px #fff;}"
+    },
+    {
+      "name": "Booking Plate",
+      "kind": "card",
+      "refersTo": "plate-book",
+      "description": "Logo Orange plate with an ink inset rule; the booking action flips to white with an ink rule, the second action is ink with an orange rule.",
+      "html": "<div class=\"ds-book-plate\"><h2>Marcar avaliação</h2><p>Diga-nos o que sente. Encontramos consigo o melhor horário.</p><div class=\"ds-actions\"><button class=\"ds-btn ds-btn-white\">Marcar por WhatsApp</button><button class=\"ds-btn ds-btn-ink\">Ligar para a clínica</button></div></div>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;}.ds-btn{display:inline-flex;align-items:center;gap:.6em;min-height:3.25rem;padding:.75rem 1.35rem;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:1.125rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease-out),transform .2s var(--ease-out),box-shadow .2s var(--ease-out);} .ds-btn:hover{transform:translateY(-1px);} .ds-btn:active{transform:none;} .ds-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;} .ds-book-plate{background:var(--mark);color:var(--ink);border-radius:var(--radius);box-shadow:inset 0 0 0 5px var(--mark),inset 0 0 0 8px var(--ink);padding:2rem 1.5rem 1.5rem;max-width:22rem;font-size:1.125rem;line-height:1.6;} .ds-book-plate h2{margin:0;font-size:1.875rem;font-weight:800;line-height:1.12;letter-spacing:-0.015em;} .ds-book-plate p{margin:.75rem 0 0;} .ds-actions{display:grid;gap:.75rem;margin-top:1.5rem;} .ds-actions .ds-btn{justify-content:center;width:100%;} .ds-btn-white{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 5px var(--ink);} .ds-btn-white:hover{background:var(--brown-tint);box-shadow:inset 0 0 0 3px var(--brown-tint),inset 0 0 0 5px var(--ink);} .ds-btn-ink{background:var(--ink);color:#fff;box-shadow:inset 0 0 0 3px var(--ink),inset 0 0 0 5px var(--mark);} .ds-btn-ink:hover{background:var(--ink-hover);box-shadow:inset 0 0 0 3px var(--ink-hover),inset 0 0 0 5px var(--mark);}"
+    },
+    {
+      "name": "Direction Plate with Route Rows",
+      "kind": "custom",
+      "refersTo": "route-row",
+      "description": "Charcoal plate with an inset white rule; each row is a whole-link sign line of pictogram, need, destination and arrow.",
+      "html": "<nav class=\"ds-field\"><div class=\"ds-dir-plate\"><h2>Para onde quer ir?</h2><ul class=\"ds-routes\"><li><a class=\"ds-route\" href=\"#\"><svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"7.5\" r=\"4\"/><path d=\"M6.5 21c0-4 2.4-7 5.5-7s5.5 3 5.5 7\"/></svg><span><span class=\"ds-need\">O meu bebé ou filho precisa de apoio</span><span class=\"ds-dest\">Fisioterapia pediátrica, terapia da fala</span></span><span class=\"ds-arrow\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12h16M13 5l7 7-7 7\"/></svg></span></a></li><li><a class=\"ds-route\" href=\"#\"><svg class=\"ds-ico\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"15.5\" cy=\"4\" r=\"2\"/><path d=\"M13.5 8l-3.5 3 2.5 3-2 6.5M12.5 14l4 1.5 2 4.5M10 11H6\"/></svg><span><span class=\"ds-need\">Faço desporto e quero prevenir lesões</span><span class=\"ds-dest\">Prevenção, recuperação</span></span><span class=\"ds-arrow\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12h16M13 5l7 7-7 7\"/></svg></span></a></li></ul></div></nav>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-field{background:var(--paper);padding:1.5rem;color:#fff;} .ds-dir-plate{background:var(--sign);border-radius:var(--radius);box-shadow:inset 0 0 0 5px var(--sign),inset 0 0 0 8px #fff;padding:1.5rem 2rem 1rem;} .ds-dir-plate h2{margin:0;font-size:1.875rem;font-weight:800;line-height:1.12;padding:.75rem 0 1rem;border-bottom:3px solid #fff;} .ds-routes{list-style:none;margin:0;padding:0;} .ds-routes li+li{border-top:2px solid rgb(255 255 255/.5);} .ds-route{display:grid;grid-template-columns:2.75rem minmax(0,1fr) auto;align-items:center;gap:1rem;padding:.7rem .25rem;min-height:3.5rem;color:#fff;text-decoration:none;border-radius:8px;} .ds-ico{width:2.5rem;height:2.5rem;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;} .ds-need{display:block;font-weight:800;font-size:1.375rem;line-height:1.25;} .ds-dest{display:block;color:var(--sign-tint);font-size:1rem;margin-top:.15rem;} .ds-arrow{display:flex;transition:transform .25s var(--ease-out);} .ds-arrow svg{width:2.25rem;height:2.25rem;} .ds-route:hover .ds-need{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em;} .ds-route:hover .ds-arrow{transform:translateX(6px);} .ds-route:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 9px #fff;border-radius:6px;}"
+    },
+    {
+      "name": "Place Plate",
+      "kind": "card",
+      "refersTo": "plate-place",
+      "description": "Deep Orange plate with a white inset rule for location, parking and access.",
+      "html": "<a class=\"ds-place\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"3\"/><path d=\"M9 17V7h4a3 3 0 0 1 0 6H9\"/></svg><span><strong>Vale da Fonte, Leiria</strong><span>Estacionamento e acesso fácil</span></span></a>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-place{display:grid;grid-template-columns:auto 1fr;gap:.75rem 1rem;align-items:center;background:var(--brown);color:#fff;border-radius:var(--radius);box-shadow:inset 0 0 0 5px var(--brown),inset 0 0 0 8px #fff;padding:1.5rem;text-decoration:none;max-width:22rem;} .ds-place svg{width:2rem;height:2rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;} .ds-place strong{display:block;font-size:1.375rem;line-height:1.25;font-weight:800;} .ds-place span span{color:#fff;font-size:1rem;} .ds-place:hover strong{text-decoration:underline;text-underline-offset:.2em;} .ds-place:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:inset 0 0 0 5px var(--brown),inset 0 0 0 8px #fff,0 0 0 9px #fff;}"
+    },
+    {
+      "name": "Linha da vida Stations",
+      "kind": "custom",
+      "refersTo": "station-dot",
+      "description": "Metro-line life stages on a deep charcoal field, operable as tabs; 35% white base line under a white drawn line; selected station inverts to white with a double ring.",
+      "html": "<div class=\"ds-line\"><div class=\"ds-stations\" role=\"tablist\"><button class=\"ds-station\" role=\"tab\" aria-selected=\"true\"><span class=\"ds-dot\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"7.5\" r=\"4\"/><path d=\"M6.5 21c0-4 2.4-7 5.5-7s5.5 3 5.5 7\"/></svg></span><span class=\"ds-name\">Bebé e criança</span><span class=\"ds-age\">0 aos 12 anos</span></button><button class=\"ds-station\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-dot\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"15.5\" cy=\"4\" r=\"2\"/><path d=\"M13.5 8l-3.5 3 2.5 3-2 6.5M12.5 14l4 1.5 2 4.5\"/></svg></span><span class=\"ds-name\">Desporto</span><span class=\"ds-age\">Amador ou federado</span></button><button class=\"ds-station\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-dot\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"5\" r=\"2\"/><path d=\"M12 8v7l-3 6M12 15l3 6M16 10v11\"/></svg></span><span class=\"ds-name\">Sénior</span><span class=\"ds-age\">Autonomia e equilíbrio</span></button></div></div>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-line{background:var(--sign-deep);padding:2rem 1rem;color:#fff;} .ds-stations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative;} .ds-stations::before{content:'';position:absolute;left:calc(100%/6);right:calc(100%/6);top:1.75rem;height:10px;margin-top:-5px;border-radius:5px;background:rgb(255 255 255/.35);} .ds-stations::after{content:'';position:absolute;left:calc(100%/6);right:50%;top:1.75rem;height:10px;margin-top:-5px;border-radius:5px;background:#fff;} .ds-station{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:.75rem;background:none;border:0;font:inherit;color:#fff;cursor:pointer;border-radius:12px;padding:0 .25rem .75rem;} .ds-dot{width:3.5rem;height:3.5rem;border-radius:50%;background:var(--sign);border:6px solid #fff;display:grid;place-items:center;transition:background-color .25s var(--ease-out),transform .25s var(--ease-out);box-sizing:border-box;} .ds-dot svg{width:1.6rem;height:1.6rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;} .ds-name{font-weight:800;font-size:1.125rem;line-height:1.2;} .ds-age{font-size:1rem;color:var(--sign-tint);} .ds-station:hover .ds-dot{transform:scale(1.08);} .ds-station[aria-selected=true] .ds-dot{background:#fff;color:var(--sign);box-shadow:0 0 0 4px var(--sign-deep),0 0 0 7px #fff;} .ds-station[aria-selected=true] .ds-name{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.25em;} .ds-station:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 9px #fff;}"
+    },
+    {
+      "name": "Kilometre-post Steps",
+      "kind": "custom",
+      "refersTo": "km-post",
+      "description": "Counted steps as kilometre posts: Logo Orange cap, white body, 3px ink border, heavy numeral.",
+      "html": "<div class=\"ds-steps-plate\"><ol class=\"ds-steps\"><li><span><strong>Envie uma mensagem ou ligue</strong><span>Diga-nos o que sente ou o que procura.</span></span></li><li><span><strong>Avaliação individual</strong><span>Ouvimos a sua história e avaliamos a situação com calma.</span></span></li><li><span><strong>Um plano para si</strong><span>Combinamos o acompanhamento, a frequência e os exercícios para casa.</span></span></li></ol></div>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-steps-plate{background:var(--paper);color:var(--ink);border-radius:var(--radius);box-shadow:inset 0 0 0 3px var(--sign),0 10px 30px rgb(0 0 0/.08);padding:2rem;font-size:1.125rem;line-height:1.6;} .ds-steps{list-style:none;margin:0;padding:0;counter-reset:step;display:grid;gap:1.5rem;} .ds-steps li{counter-increment:step;display:grid;grid-template-columns:2.75rem 1fr;gap:1rem;align-items:start;} .ds-steps li::before{content:counter(step);box-sizing:border-box;width:2.75rem;height:3.5rem;border-radius:1.4rem 1.4rem 6px 6px;background:linear-gradient(var(--mark) 0 .85rem,#fff .85rem);color:var(--ink);display:grid;place-items:center;padding-top:.75rem;font-weight:800;font-size:1.375rem;line-height:1;border:3px solid var(--ink);} .ds-steps strong{display:block;font-size:1.375rem;line-height:1.3;} .ds-steps span span{color:var(--ink-soft);}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "White field, 2px soft-ink border, charcoal outline and charcoal-tint halo on focus.",
+      "html": "<label class=\"ds-field-wrap\">Nome do lar<input class=\"ds-input\" type=\"text\" placeholder=\"\"></label>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-field-wrap{display:grid;gap:.4rem;font-weight:800;color:var(--ink);font-size:1.125rem;max-width:24rem;} .ds-input{font:inherit;font-weight:400;color:var(--ink);min-height:3.25rem;width:100%;box-sizing:border-box;padding:.7rem .9rem;background:#fff;border:2px solid var(--ink-soft);border-radius:10px;} .ds-input::placeholder{color:var(--ink-soft);} .ds-input:hover{border-color:var(--ink);} .ds-input:focus-visible{border-color:var(--sign);box-shadow:0 0 0 4px var(--sign-tint);outline:3px solid var(--sign);outline-offset:1px;}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky white bar with a rule-grey bottom border: logo mark image (omitted in this preview) plus the light wordmark, 44px ink links, compact orange booking CTA.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-brand\" href=\"#\">FisioStudio</a><nav><a class=\"ds-nav\" href=\"#\">Serviços</a><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Equipa</a><a class=\"ds-nav\" href=\"#\">Onde estamos</a></nav><a class=\"ds-cta\" href=\"#\">Marcar avaliação</a></header>",
+      "css": ":host{--sign:#424242;--sign-deep:#2b2b2b;--sign-tint:#d9d9d9;--mark:#ef8120;--mark-hover:#f59a47;--brown:#9c4a09;--brown-tint:#fce3cc;--ink:#1f1f1f;--ink-soft:#5c5c5c;--ink-hover:#3a3a3a;--night:#1f1f1f;--night-soft:#c8c8c8;--ground:#f5f5f4;--paper:#fff;--rule:#dcdcdc;--radius:14px;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;} .ds-header{display:flex;align-items:center;gap:1.5rem;min-height:4.5rem;padding:0 1.5rem;background:var(--paper);color:var(--ink);border-bottom:1px solid var(--rule);box-shadow:0 2px 12px rgb(0 0 0/.25);} .ds-brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--sign);text-decoration:none;font-weight:300;font-size:1.625rem;letter-spacing:-0.01em;line-height:1;padding:.25rem .4rem;border-radius:10px;} .ds-header nav{margin-left:auto;display:flex;gap:.25rem;} .ds-nav{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .8rem;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:1rem;} .ds-nav:hover{background:var(--ground);text-decoration:underline;} .ds-nav[aria-current=page]{text-decoration:underline;text-decoration-thickness:3px;} .ds-cta{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem 1rem;border-radius:12px;background:var(--mark);color:var(--ink);font-weight:800;font-size:1rem;text-decoration:none;box-shadow:inset 0 0 0 3px var(--mark),inset 0 0 0 5px var(--ink);} .ds-cta:hover{background:var(--mark-hover);} .ds-nav:focus-visible,.ds-brand:focus-visible,.ds-cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 9px #fff;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signposted Road",
+    "overview": "The site is a wayfinding sign system dressed in the FisioStudio logo's own colours: orange #EF8120, charcoal #424242 and white. Information sits on rounded-rectangle sign plates framed by an inset white rule; charcoal plates point the way, the orange plate books, the deep-orange plate locates. Arrows point, pictograms name, kilometre-post numerals count. A visitor does not browse a clinic brochure, they read a sign, pick their direction and follow it. Colour is never decoration: each hue is a sign category with a fixed meaning.\n\nThe page opens on white, the logo's ground, with ink type and the plates standing on it. Deep charcoal fields carry the wayfinding sections (Linha da vida, the lares lifeline), a full orange field carries the one statement band, and an orange-tint ground holds the location section. Density is low and type is large, because the audience includes seniors and readers with low health literacy. One hyperlegible sans family carries everything, heavy (800) for anything that functions as a sign, regular for reading, and light (300) only for the wordmark beside the logo mark, echoing the logo. Depth is flat, built from colour fields and inset rules. Motion is one gesture: the Linha da vida line draws once, and small hover nudges confirm direction.",
+    "keyCharacteristics": [
+      "Logo palette only: Logo Orange, Charcoal Sign, white, with Deep Orange for orange on light grounds.",
+      "Rounded sign plates (14px) framed by an inset rule, drawn with layered inset box-shadows.",
+      "Every hue is a sign category: charcoal directs, orange books and carries the brand, deep orange locates.",
+      "One family, Atkinson Hyperlegible Next: 800 for signs, 400 for reading, 300 for the wordmark only; 18px body.",
+      "Stroke pictograms (2px round stroke, inline SVG) and bold arrow glyphs; kilometre-post numerals with an orange cap.",
+      "WCAG 2.2 AA as a floor: every text pairing measured at 4.5:1 or above, targets 44px or larger."
+    ],
+    "rules": [
+      {
+        "name": "The Logo Palette Rule",
+        "body": "Hues come from the logo: orange, charcoal, white, plus the deep orange and tints derived from them. No other chromatic colour enters the system except form error and success states.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sign Category Rule",
+        "body": "A hue means one thing. Charcoal directs, orange books and speaks for the brand, deep orange locates. A new surface picks the category it belongs to; it never borrows a hue for emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink On Orange Rule",
+        "body": "Logo Orange always carries ink text and ink rules, never white. Orange text or graphics on a light ground use Deep Orange, because Logo Orange on white is 2.68:1.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flip On Orange Rule",
+        "body": "A button never sits orange on orange. On the booking plate the booking action flips to a white button with an ink rule and the second action is ink with an orange rule; on the orange band the action is ink with an orange rule.",
+        "section": "colors"
+      },
+      {
+        "name": "The 18px Floor Rule",
+        "body": "Body text is 18px (`--step-0`); the smallest step is 16px. No running text in capitals and no tracking-out of small text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Heavy Sign Rule",
+        "body": "Anything that functions as a sign (headings, route needs, station names, button labels) is weight 800; reading text is 400; labels are 700. Weight 300 belongs to the header wordmark alone.",
+        "section": "typography"
+      },
+      {
+        "name": "The Inset Rule Rule",
+        "body": "A plate's frame is drawn inside it with stacked inset box-shadows: a band of the plate's own colour (3 to 5px), then the rule colour (to 5 or 8px). Charcoal and deep-orange plates take a white rule (`inset 0 0 0 5px self, inset 0 0 0 8px #fff`); the orange plate an ink rule; paper plates a charcoal, ink or deep-orange rule. Borders are not used for plate frames.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every new region a sign category before a colour: charcoal to direct, orange to book or speak for the brand, deep orange to locate.",
+      "Do put ink text on Logo Orange and use Deep Orange for orange text or graphics on light grounds.",
+      "Do frame plates with stacked inset box-shadows (own colour, then rule colour) at 14px radius.",
+      "Do keep body text at 18px (`--step-0`, line-height 1.6) and never set text below 16px.",
+      "Do measure every text pairing at 4.5:1 or above; the shipped pairs run from 5.0:1 (deep orange on tint) to 16.48:1 (ink on white).",
+      "Do make every interactive target at least 2.75rem (44px); buttons and fields are 3.25rem.",
+      "Do keep motion to the one-time line draw and small hover nudges, and collapse all transitions under `prefers-reduced-motion: reduce` (the line shows fully drawn).",
+      "Do use inline stroke SVG pictograms (2px round stroke, `currentColor`) and arrow glyphs for direction.",
+      "Do mark unknown facts with the `[a preencher]` placeholder chip rather than inventing them."
+    ],
+    "donts": [
+      "Don't set white text on Logo Orange or Logo Orange text on white.",
+      "Don't place an orange button on an orange plate or band; flip it to white or ink.",
+      "Don't introduce hues outside the logo palette; blue, green or purple accents break the brand.",
+      "Don't use Night outside the footer.",
+      "Don't set running text in capitals or add small tracked-out labels above headings.",
+      "Don't introduce a second type family, or use weight 300 anywhere but the wordmark.",
+      "Don't lift plates or buttons with blurred shadows; any soft shadow is neutral `rgb(0 0 0 / x)`, never tinted.",
+      "Don't use Rule Grey for text."
+    ]
+  }
+}

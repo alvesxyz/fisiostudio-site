@@ -29,6 +29,24 @@
         ],
         "createdAt": "2026-11-25T20:41:50.444Z",
         "reason": "Claude triage: DESIGN.md records the hero h1 fixed at 4rem from 75rem; detector reads only the clamp ramp"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "marcar.html"
+        ],
+        "createdAt": "2026-11-27T04:13:18.536Z",
+        "reason": "Claude triage: full-bleed hero holds content in .wrap with >=16px gutter, same as index/lares"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.25rem",
+        "files": [
+          "assets/styles.css"
+        ],
+        "createdAt": "2026-11-27T04:13:18.545Z",
+        "reason": "Claude triage: mobile-only wordmark size beside the logo mark so the header fits at 390px"
       }
     ]
   }

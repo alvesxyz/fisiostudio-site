@@ -228,7 +228,11 @@ a {
   .js .nav.is-open { display: block; }
   .js .nav ul { flex-direction: column; padding: var(--space-2) var(--gutter) var(--space-4); }
   .js .nav a { min-height: 3rem; font-size: var(--step-0); width: 100%; border-bottom: 1px solid var(--rule); border-radius: 0; }
-  .site-header .wrap { gap: var(--space-2); }
+  .site-header .wrap { gap: var(--space-2); min-height: 4rem; }
+  .brand { gap: 0.4rem; font-size: 1.25rem; padding-inline: 0.2rem; }
+  .brand img { height: 2.25rem; }
+  .js .menu-toggle { padding: 0; width: 2.75rem; justify-content: center; }
+  .js .menu-toggle .menu-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .header-cta { margin-left: auto; padding-inline: 0.85rem; }
   .cta-long { display: none; }
   .cta-short { display: inline; }
@@ -448,15 +452,35 @@ a {
   border: 3px solid var(--sign); transform: translateY(0.05em);
 }
 .note { font-size: var(--step--1); color: var(--ink-soft); }
+.swipe-hint { display: none; margin: 0 0 var(--space-2); color: var(--sign-tint); font-size: var(--step--1); }
 
 @media (max-width: 56rem) {
-  .stations { grid-template-columns: 1fr; gap: 0; }
-  .stations::before, .stations::after { left: 1.75rem; right: auto; top: 1.75rem; bottom: 1.75rem; width: 10px; height: auto; margin: 0 0 0 -5px; transform-origin: center top; }
-  .js .line-map:not(.is-drawn) .stations::after { transform: scaleY(0); }
-  .line-map.is-drawn .stations::after { transform: scaleY(1); }
-  .station { flex-direction: row; text-align: left; gap: var(--space-3); padding: 0.4rem 0; }
+  /* Telemóvel: linha horizontal que desliza, painel logo por baixo */
+  .stations {
+    display: flex; gap: 0;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter);
+    margin-inline: calc(-1 * var(--gutter)); padding: 0.5rem var(--gutter) 0.75rem;
+    scrollbar-width: none;
+  }
+  .stations::-webkit-scrollbar { display: none; }
+  .stations::before, .stations::after { display: none; }
+  .station { flex: 0 0 6.5rem; padding: 0 0.15rem 0.25rem; gap: 0.4rem; scroll-snap-align: start; }
+  .station::before {
+    content: ""; position: absolute; z-index: -1;
+    top: 1.75rem; left: 0; right: 0; height: 8px; margin-top: -4px;
+    background: rgb(255 255 255 / 0.45);
+  }
+  .station:first-child::before { left: 50%; }
+  .station:last-child::before { right: 50%; }
+  .station__dot { width: 3.5rem; height: 3.5rem; }
+  .station__name { font-size: var(--step--1); }
+  .station__age { display: none; }
+  .stop-panel { margin-top: var(--space-3); }
+  .swipe-hint { display: block; }
   .stop-panel__body { grid-template-columns: 1fr; padding: var(--space-4); gap: var(--space-4); }
-  .stop-panel__title { padding: var(--space-3) var(--space-4); }
+  .stop-panel__title { padding: var(--space-3) var(--space-4); font-size: var(--step-1); }
+  .stop-panel__title .icon { width: 1.75rem; height: 1.75rem; }
 }
 
 /* ---------- Banda: saúde pélvica ---------- */
@@ -512,7 +536,7 @@ a {
   .directory tbody th { grid-column: 1 / -1; }
   .directory td::before { content: attr(data-label); display: block; font-size: var(--step--1); color: var(--sign-tint); }
 }
-@media (max-width: 24rem) { .brand { font-size: 1.125rem; padding-inline: 0.6rem; } }
+@media (max-width: 22rem) { .brand span { display: none; } }
 
 /* ---------- Como marcar ---------- */
 .steps-plate {

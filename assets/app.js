@@ -43,10 +43,15 @@
         panels[i].hidden = !on;
       });
       if (focus) tabs[index].focus();
+      if (ready && tabs[index].scrollIntoView && window.matchMedia('(max-width: 56rem)').matches) {
+        tabs[index].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
     };
 
+    var ready = false;
     var initial = 0;
     select(initial, false);
+    ready = true;
 
     tabs.forEach(function (tab, i) {
       tab.addEventListener('click', function () { select(i, false); });
